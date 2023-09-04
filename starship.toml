@@ -1,0 +1,48 @@
+# Enable/Disable the newline at the start of the prompt
+add_newline = true
+
+# Overwrite a default_prompt_order and  use custom prompt_order
+format = """\
+$gcloud\
+$package\
+$python\
+$nodejs\
+$custom\
+$character\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+"""
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[python]
+style = 'fg:#00e676'
+
+[custom.root]
+command = "echo 🌱"
+when = """ test "$HOME" == "$PWD" """
+
+[gcloud]
+symbol = '️🇬️ '
+format = '[$symbol ($project)]($style) '
+
+[git_branch]
+truncation_length = 30
+
+[git_commit]
+commit_hash_length = 4
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[nodejs]
+format = 'via [🤖 $version](bold green) '
