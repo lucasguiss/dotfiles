@@ -32,8 +32,8 @@ command = "echo 🌱"
 when = """ test "$HOME" == "$PWD" """
 
 [gcloud]
-symbol = '️🇬️ '
-format = '[$symbol ($project)]($style) '
+style = 'bold yellow'
+format = '[$symbol$project]($style) '
 
 [git_branch]
 truncation_length = 30
