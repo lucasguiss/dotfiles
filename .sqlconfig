@@ -1,0 +1,7 @@
+[wsl2]
+memory=6GB
+swap=10GB
+processors=2
+nestedVirtualization=false
+[experimental]
+autoMemoryReclaim=dropcache 
