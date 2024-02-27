@@ -1,5 +1,4 @@
 alias pa="source venv/bin/activate"
-alias drm="docker rm -f $(docker ps -a -q)"
-alias dvrm="docker volume rm $(docker volume ls -q)"
+alias pc="python -m venv venv"
 alias ls="exa --icons --long --all"
 alias cd="z"
