@@ -16,7 +16,7 @@ if ask "Install essentials?"; then
 fi
 
 if ask "Source ssh-agent?"; then
-    sh ./scripts/essentials.sh
+    sh ./scripts/ssh_agent.sh
 fi
 
 for file in installation/*; do
